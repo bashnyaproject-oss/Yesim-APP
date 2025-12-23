@@ -2433,11 +2433,23 @@
         <div class="content">
           <!-- Информационный блок -->
           <div class="card compatibility-card" style="margin-bottom: 16px;">
-            <div style="font-size: 14px; color: #666;">
-              Когда вы подключаете сервисы путешествий (Aviasales, РЖД и др.), мы автоматически видим ваши предстоящие поездки и предлагаем подходящие eSIM-пакеты.
+            <div style="font-size: 14px; color: #666; margin-bottom: 12px;">
+              Когда вы подключаете сервисы путешествий (Aviasales, РЖД и др.), мы автоматически видим ваши предстоящие поездки и предлагаем подходящие eSIM‑пакеты.
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn" onclick="scanTicket()" style="flex: 1; padding: 10px; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                  <rect x="3" y="5" width="18" height="14" rx="2"/>
+                  <path d="M7 9H17M7 13H13" stroke-linecap="round"/>
+                </svg>
+                <span>Сканировать билет</span>
+              </button>
+              <button class="btn btn-outline" onclick="alert('В демо-версии введите данные рейса вручную. В реальном приложении здесь будет форма для ввода номера рейса или бронирования.')" style="flex: 1; padding: 10px; font-size: 14px;">
+                Ввести вручную
+              </button>
             </div>
           </div>
-
+          
           <!-- Предстоящие рейсы -->
           <div class="section-title" style="font-size: 18px; margin-bottom: 12px;">Предстоящие поездки</div>
           
@@ -2566,6 +2578,158 @@
       </div>
     </div>
     
+    <!-- Экран: Мои рейсы и билеты -->
+    <div class="screen" id="myTripsScreen">
+      <div class="header">
+        <div class="header-content">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <button onclick="showScreen('profileScreen')" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); border-radius: 10px; padding: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div>
+              <h1 style="font-size: 20px; margin-bottom: 4px;">Мои рейсы и билеты</h1>
+              <p style="font-size: 14px; opacity: 0.95;">Предстоящие поездки и eSIM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-wrapper">
+        <div class="content">
+          <!-- Информационный блок -->
+          <div class="card compatibility-card" style="margin-bottom: 16px;">
+            <div style="font-size: 14px; color: #666;">
+              Когда вы подключаете сервисы путешествий (Aviasales, РЖД и др.), мы автоматически видим ваши предстоящие поездки и предлагаем подходящие eSIM‑пакеты.
+            </div>
+          </div>
+
+          <!-- Предстоящие рейсы -->
+          <div class="section-title" style="font-size: 18px; margin-bottom: 12px;">Предстоящие поездки</div>
+          
+          <!-- Демо-рейсы находятся в существующем блоке выше -->
+
+          <!-- Карта Wi‑Fi точек и новости будут в отдельном экране новостей -->
+        </div>
+      </div>
+    </div>
+    
+    <!-- Экран: Новости для путешественников -->
+    <div class="screen" id="newsScreen">
+      <div class="header">
+        <div class="header-top">
+          <div>
+            <h1>Новости</h1>
+            <p>Все для путешественников</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="content-wrapper">
+        <div class="content">
+          <!-- Блок новостей -->
+          <div class="card" style="margin-bottom: 16px; padding: 0; overflow: hidden;">
+            <div style="padding: 16px 16px 8px;">
+              <div class="section-title" style="font-size: 18px; margin-bottom: 4px; padding: 0;">Свежие новости</div>
+              <div style="font-size: 13px; color: #666;">Подборка важного для поездок и подключения eSIM.</div>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 12px; padding: 0 16px 16px;">
+              <!-- Новость 1 -->
+              <div style="border-radius: 14px; background: #FFF7ED; border: 1px solid #FED7AA; overflow: hidden; display: flex; flex-direction: row; gap: 0;">
+                <div style="width: 88px; min-width: 88px; background-image: linear-gradient(135deg, #FDBA74 0%, #F97316 100%); display: flex; align-items: flex-end; justify-content: center; padding: 8px;">
+                  <div style="font-size: 28px;">🌍</div>
+                </div>
+                <div style="padding: 10px 12px; flex: 1;">
+                  <div style="font-size: 11px; text-transform: uppercase; color: #EA580C; font-weight: 600; margin-bottom: 4px; letter-spacing: 0.06em;">Роуминг</div>
+                  <div style="font-size: 15px; font-weight: 600; margin-bottom: 4px;">Европа снижает цены на eSIM‑роуминг</div>
+                  <div style="font-size: 13px; color: #666; margin-bottom: 6px;">В популярных странах ЕС появляются новые локальные eSIM‑пакеты от 5€ за 5GB.</div>
+                  <div style="font-size: 12px; color: #999;">Обновлено: сегодня</div>
+                </div>
+              </div>
+              
+              <!-- Новость 2 -->
+              <div style="border-radius: 14px; background: #EFF6FF; border: 1px solid #BFDBFE; overflow: hidden; display: flex; flex-direction: row; gap: 0;">
+                <div style="width: 88px; min-width: 88px; background-image: linear-gradient(135deg, #93C5FD 0%, #1D4ED8 100%); display: flex; align-items: flex-end; justify-content: center; padding: 8px;">
+                  <div style="font-size: 28px;">✈️</div>
+                </div>
+                <div style="padding: 10px 12px; flex: 1;">
+                  <div style="font-size: 11px; text-transform: uppercase; color: #1D4ED8; font-weight: 600; margin-bottom: 4px; letter-spacing: 0.06em;">Аэропорты</div>
+                  <div style="font-size: 15px; font-weight: 600; margin-bottom: 4px;">В Токио и Сеуле появились новые зоны с бесплатным Wi‑Fi</div>
+                  <div style="font-size: 13px; color: #666; margin-bottom: 6px;">Теперь проще активировать eSIM сразу по прилете, не тратя мобильный трафик.</div>
+                  <div style="font-size: 12px; color: #999;">Обновлено: вчера</div>
+                </div>
+              </div>
+              
+              <!-- Новость 3 -->
+              <div style="border-radius: 14px; background: #ECFDF5; border: 1px solid #A7F3D0; overflow: hidden; display: flex; flex-direction: row; gap: 0;">
+                <div style="width: 88px; min-width: 88px; background-image: linear-gradient(135deg, #6EE7B7 0%, #047857 100%); display: flex; align-items: flex-end; justify-content: center; padding: 8px;">
+                  <div style="font-size: 28px;">📱</div>
+                </div>
+                <div style="padding: 10px 12px; flex: 1;">
+                  <div style="font-size: 11px; text-transform: uppercase; color: #047857; font-weight: 600; margin-bottom: 4px; letter-spacing: 0.06em;">Советы</div>
+                  <div style="font-size: 15px; font-weight: 600; margin-bottom: 4px;">Как не сжечь весь трафик в первый день поездки</div>
+                  <div style="font-size: 13px; color: #666; margin-bottom: 6px;">Мы собрали список настроек и лайфхаков для iOS и Android, чтобы экономить до 30% трафика.</div>
+                  <div style="font-size: 12px; color: #999;">Обновлено: 2 дня назад</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Карта Wi‑Fi точек -->
+          <div class="card" style="margin-bottom: 16px;">
+            <div class="section-title" style="font-size: 16px; margin-bottom: 8px;">Карта Wi‑Fi точек</div>
+            <div style="font-size: 13px; color: #666; margin-bottom: 8px;">
+              Условная карта популярных точек Wi‑Fi по миру: аэропорты, вокзалы и городские зоны.
+            </div>
+            <div id="wifiMap" style="height: 220px; border-radius: 16px; overflow: hidden; margin-top: 4px;"></div>
+            <div style="font-size: 11px; color: #999; margin-top: 8px;">
+              Данные демонстрационные. В реальном приложении здесь будут живые точки из партнёрских сервисов.
+            </div>
+          </div>
+          
+          <!-- Список Wi‑Fi точек -->
+          <div class="card">
+            <div class="section-title" style="font-size: 16px; margin-bottom: 8px;">Список доступных точек</div>
+            <div style="display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: #444;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <div style="font-weight: 600;">Париж — CDG аэропорт</div>
+                  <div style="font-size: 12px; color: #666;">Бесплатный Wi‑Fi в зонах вылета и прилёта</div>
+                </div>
+                <span style="font-size: 11px; color: #16A34A; font-weight: 600;">FREE</span>
+              </div>
+              
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <div style="font-weight: 600;">Берлин — Hauptbahnhof</div>
+                  <div style="font-size: 12px; color: #666;">30 минут бесплатного Wi‑Fi для всех</div>
+                </div>
+                <span style="font-size: 11px; color: #16A34A; font-weight: 600;">FREE</span>
+              </div>
+              
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <div style="font-weight: 600;">Стамбул — Старый город</div>
+                  <div style="font-size: 12px; color: #666;">Кафе и коворкинги с быстрым интернетом</div>
+                </div>
+                <span style="font-size: 11px; color: #F97316; font-weight: 600;">CAFE</span>
+              </div>
+              
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <div style="font-weight: 600;">Токио — Tokyo Station</div>
+                  <div style="font-size: 12px; color: #666;">Туристический центр + бесплатный Wi‑Fi</div>
+                </div>
+                <span style="font-size: 11px; color: #16A34A; font-weight: 600;">FREE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <div class="tabs">
       <div class="tab active" onclick="showScreen('homeScreen')">
         <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -2581,6 +2745,13 @@
         </svg>
         <div>Заказы</div>
       </div>
+      <div class="tab" onclick="showScreen('newsScreen')">
+        <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="4" width="18" height="14" rx="2"/>
+          <path d="M7 8H17M7 12H13" stroke-linecap="round"/>
+        </svg>
+        <div>Новости</div>
+      </div>
       <div class="tab" onclick="showScreen('profileScreen')">
         <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="12" cy="8" r="4"/>
@@ -2590,6 +2761,9 @@
       </div>
     </div>
   </div>
+  
+  <!-- Скрытый инпут для скана билета -->
+  <input id="ticketUpload" type="file" accept="image/*,.pdf" style="display:none" />
   
   <!-- Бургер-меню (вне контейнера для правильного позиционирования) -->
   <div class="burger-overlay" id="burgerOverlay" onclick="closeBurgerMenu()"></div>
@@ -2752,6 +2926,17 @@
     let mapMarkers = [];
     let mapRouteLayer = null;
     
+    // Карта точек Wi‑Fi для экрана новостей
+    let wifiMap = null;
+    let wifiMarkers = [];
+    const wifiHotspots = [
+      {city: 'Париж', name: 'CDG аэропорт — бесплатный Wi‑Fi', lat: 49.0097, lng: 2.5479, type: 'free'},
+      {city: 'Берлин', name: 'Berlin Hbf — Wi‑Fi в зале ожидания', lat: 52.5251, lng: 13.3694, type: 'free'},
+      {city: 'Стамбул', name: 'Кафе в историческом центре', lat: 41.0082, lng: 28.9784, type: 'cafe'},
+      {city: 'Токио', name: 'Tokyo Station — туристический центр', lat: 35.6812, lng: 139.7671, type: 'free'},
+      {city: 'Барселона', name: 'Пляжная зона с городским Wi‑Fi', lat: 41.3851, lng: 2.1734, type: 'city'}
+    ];
+    
     let selectedCountry = null;
     let filteredCountries = [...countries]; // Копия массива
     let routeCountries = [];
@@ -2810,8 +2995,12 @@
         } else if (screenId === 'ordersScreen') {
           const tab = document.querySelectorAll('.tab')[1];
           if (tab) tab.classList.add('active');
-        } else if (screenId === 'profileScreen') {
+        } else if (screenId === 'newsScreen') {
           const tab = document.querySelectorAll('.tab')[2];
+          if (tab) tab.classList.add('active');
+          renderNewsScreen();
+        } else if (screenId === 'profileScreen') {
+          const tab = document.querySelectorAll('.tab')[3];
           if (tab) tab.classList.add('active');
         } else if (screenId === 'mapScreen') {
           renderMapScreen();
@@ -3943,6 +4132,49 @@ ${invitationLink}`;
       closeQRModal();
       alert('Успешно! eSIM установлен и активирован');
       showScreen('ordersScreen');
+    }
+    
+    function renderNewsScreen() {
+      // Инициализируем карту Wi‑Fi-точек
+      const mapContainer = document.getElementById('wifiMap');
+      if (mapContainer) {
+        if (!wifiMap) {
+          wifiMap = L.map('wifiMap', {
+            zoomControl: false,
+          }).setView([30, 10], 2);
+          
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap',
+          }).addTo(wifiMap);
+        } else {
+          // Если карта уже создана, просто обновим размер (на случай скрытого экрана)
+          setTimeout(() => {
+            wifiMap.invalidateSize();
+          }, 200);
+        }
+        
+        // Очищаем старые маркеры
+        wifiMarkers.forEach(m => wifiMap.removeLayer(m));
+        wifiMarkers = [];
+        
+        // Добавляем точки
+        wifiHotspots.forEach(spot => {
+          const marker = L.circleMarker([spot.lat, spot.lng], {
+            radius: 6,
+            color: '#F97316',
+            fillColor: '#F97316',
+            fillOpacity: 0.9,
+            weight: 2,
+          }).addTo(wifiMap);
+          
+          marker.bindTooltip(
+            `${spot.city}: ${spot.name}`,
+            {direction: 'top', offset: [0, -6]}
+          );
+          
+          wifiMarkers.push(marker);
+        });
+      }
     }
     
     function renderMapScreen() {
