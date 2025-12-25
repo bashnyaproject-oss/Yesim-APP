@@ -2730,6 +2730,826 @@
       </div>
     </div>
     
+    <!-- Экран: Инструкция по установке eSIM -->
+    <div class="screen" id="esimSetupScreen">
+      <div class="header" style="background: linear-gradient(135deg, #10B981 0%, #34D399 100%);">
+        <div class="header-top">
+          <div>
+            <h1>✅ Покупка завершена!</h1>
+            <p>Осталось установить eSIM</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="content" style="padding-bottom: 100px;">
+        <!-- Прогресс установки -->
+        <div class="card" style="background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%); border: 2px solid #10B981; text-align: center; padding: 24px;">
+          <div style="font-size: 48px; margin-bottom: 12px;">🎉</div>
+          <div style="font-size: 20px; font-weight: 700; color: #166534; margin-bottom: 8px;">Оплата прошла успешно!</div>
+          <div style="font-size: 14px; color: #15803D;">Следуйте инструкции ниже для активации eSIM</div>
+        </div>
+        
+        <!-- Шаг 1: Сканирование QR -->
+        <div class="section-title" style="margin-top: 24px; display: flex; align-items: center; gap: 10px;">
+          <span style="background: #F97316; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;">1</span>
+          Откройте настройки телефона
+        </div>
+        
+        <div class="card">
+          <div style="display: flex; gap: 16px;">
+            <div style="font-size: 36px;">📱</div>
+            <div>
+              <div style="font-weight: 600; margin-bottom: 8px;">Для iPhone:</div>
+              <div style="font-size: 14px; color: #666; line-height: 1.6;">
+                Настройки → Сотовая связь → Добавить eSIM → Использовать QR-код
+              </div>
+              <div style="font-weight: 600; margin-top: 12px; margin-bottom: 8px;">Для Android:</div>
+              <div style="font-size: 14px; color: #666; line-height: 1.6;">
+                Настройки → Сеть и интернет → SIM-карты → Добавить eSIM → Сканировать QR-код
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Шаг 2: QR код -->
+        <div class="section-title" style="margin-top: 20px; display: flex; align-items: center; gap: 10px;">
+          <span style="background: #F97316; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;">2</span>
+          Отсканируйте QR-код
+        </div>
+        
+        <div class="card" style="text-align: center; padding: 24px;">
+          <div style="background: white; display: inline-block; padding: 16px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+            <svg width="160" height="160" viewBox="0 0 160 160">
+              <rect fill="white" width="160" height="160"/>
+              <g fill="#1A1A1A">
+                <rect x="10" y="10" width="40" height="40"/>
+                <rect x="110" y="10" width="40" height="40"/>
+                <rect x="10" y="110" width="40" height="40"/>
+                <rect x="20" y="20" width="20" height="20" fill="white"/>
+                <rect x="120" y="20" width="20" height="20" fill="white"/>
+                <rect x="20" y="120" width="20" height="20" fill="white"/>
+                <rect x="25" y="25" width="10" height="10"/>
+                <rect x="125" y="25" width="10" height="10"/>
+                <rect x="25" y="125" width="10" height="10"/>
+                <rect x="60" y="10" width="10" height="10"/>
+                <rect x="80" y="10" width="10" height="10"/>
+                <rect x="60" y="30" width="10" height="10"/>
+                <rect x="70" y="40" width="10" height="10"/>
+                <rect x="60" y="60" width="10" height="10"/>
+                <rect x="80" y="60" width="10" height="10"/>
+                <rect x="100" y="60" width="10" height="10"/>
+                <rect x="10" y="60" width="10" height="10"/>
+                <rect x="30" y="70" width="10" height="10"/>
+                <rect x="10" y="80" width="10" height="10"/>
+                <rect x="40" y="80" width="10" height="10"/>
+                <rect x="70" y="70" width="20" height="20"/>
+                <rect x="110" y="70" width="10" height="10"/>
+                <rect x="130" y="80" width="10" height="10"/>
+                <rect x="60" y="100" width="10" height="10"/>
+                <rect x="80" y="110" width="10" height="10"/>
+                <rect x="100" y="100" width="10" height="10"/>
+                <rect x="120" y="110" width="10" height="10"/>
+                <rect x="140" y="120" width="10" height="10"/>
+                <rect x="60" y="130" width="10" height="10"/>
+                <rect x="80" y="140" width="10" height="10"/>
+                <rect x="110" y="130" width="40" height="10"/>
+                <rect x="130" y="140" width="10" height="10"/>
+              </g>
+            </svg>
+          </div>
+          <div style="margin-top: 16px;">
+            <button onclick="copyActivationCode()" style="
+              background: #F3F4F6;
+              border: none;
+              padding: 10px 20px;
+              border-radius: 10px;
+              font-size: 14px;
+              color: #374151;
+              cursor: pointer;
+            ">📋 Скопировать код активации</button>
+          </div>
+        </div>
+        
+        <!-- Шаг 3: Активация -->
+        <div class="section-title" style="margin-top: 20px; display: flex; align-items: center; gap: 10px;">
+          <span style="background: #F97316; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;">3</span>
+          Активируйте eSIM
+        </div>
+        
+        <div class="card">
+          <div style="display: flex; gap: 16px;">
+            <div style="font-size: 36px;">⚡</div>
+            <div>
+              <div style="font-weight: 600; margin-bottom: 8px;">После сканирования:</div>
+              <ul style="font-size: 14px; color: #666; line-height: 1.8; margin: 0; padding-left: 20px;">
+                <li>Подтвердите добавление eSIM</li>
+                <li>Дождитесь загрузки профиля</li>
+                <li>Назовите план (например: "Турция отпуск")</li>
+                <li>Включите передачу данных для нового eSIM</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Советы по экономии трафика -->
+        <div class="section-title" style="margin-top: 28px;">💡 Советы по экономии трафика</div>
+        
+        <div class="card" style="background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border: 1px solid #F59E0B;">
+          <div style="font-weight: 700; color: #92400E; margin-bottom: 12px; font-size: 16px;">⚙️ Настройки для экономии</div>
+          
+          <div style="margin-bottom: 16px;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+              <span style="font-size: 20px;">📴</span>
+              <div>
+                <div style="font-weight: 600; color: #78350F;">Отключите автозагрузку фото</div>
+                <div style="font-size: 13px; color: #92400E;">WhatsApp, Telegram → Настройки → Данные и память</div>
+              </div>
+            </div>
+          </div>
+          
+          <div style="margin-bottom: 16px;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+              <span style="font-size: 20px;">🔄</span>
+              <div>
+                <div style="font-weight: 600; color: #78350F;">Отключите фоновое обновление</div>
+                <div style="font-size: 13px; color: #92400E;">Настройки → Основные → Обновление контента</div>
+              </div>
+            </div>
+          </div>
+          
+          <div style="margin-bottom: 16px;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+              <span style="font-size: 20px;">☁️</span>
+              <div>
+                <div style="font-weight: 600; color: #78350F;">Отключите синхронизацию iCloud/Google</div>
+                <div style="font-size: 13px; color: #92400E;">Фото и резервные копии только по Wi-Fi</div>
+              </div>
+            </div>
+          </div>
+          
+          <div style="margin-bottom: 16px;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+              <span style="font-size: 20px;">📍</span>
+              <div>
+                <div style="font-weight: 600; color: #78350F;">Загрузите карты оффлайн</div>
+                <div style="font-size: 13px; color: #92400E;">Google Maps / Maps.me → Скачать карту региона</div>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="font-size: 20px;">📺</span>
+              <div>
+                <div style="font-weight: 600; color: #78350F;">Снизьте качество видео</div>
+                <div style="font-size: 13px; color: #92400E;">YouTube, Netflix → Настройки → Качество видео: 480p</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Дополнительные советы -->
+        <div class="card" style="margin-top: 12px;">
+          <div style="font-weight: 700; margin-bottom: 12px;">📊 Контроль расхода трафика</div>
+          
+          <div style="display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid #E5E5E5;">
+            <span style="font-size: 24px;">📱</span>
+            <div style="flex: 1;">
+              <div style="font-weight: 600;">iPhone</div>
+              <div style="font-size: 13px; color: #666;">Настройки → Сотовая связь → Статистика</div>
+            </div>
+          </div>
+          
+          <div style="display: flex; align-items: center; gap: 12px; padding: 12px 0;">
+            <span style="font-size: 24px;">🤖</span>
+            <div style="flex: 1;">
+              <div style="font-weight: 600;">Android</div>
+              <div style="font-size: 13px; color: #666;">Настройки → Сеть → Использование данных</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Важно! -->
+        <div class="card" style="background: #FEE2E2; border: 1px solid #FECACA; margin-top: 12px;">
+          <div style="display: flex; gap: 12px;">
+            <span style="font-size: 24px;">⚠️</span>
+            <div>
+              <div style="font-weight: 700; color: #991B1B; margin-bottom: 4px;">Важно!</div>
+              <div style="font-size: 14px; color: #B91C1C; line-height: 1.6;">
+                Отключите роуминг на вашей основной SIM-карте, чтобы избежать неожиданных списаний.
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Кнопки действий -->
+        <div style="margin-top: 24px;">
+          <button onclick="showScreen('ordersScreen')" style="
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #F97316 0%, #FB923C 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-bottom: 12px;
+          ">📋 Перейти к моим заказам</button>
+          
+          <button onclick="showScreen('homeScreen')" style="
+            width: 100%;
+            padding: 14px;
+            background: #F3F4F6;
+            color: #374151;
+            border: none;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+          ">🏠 На главную</button>
+        </div>
+        
+        <!-- Нужна помощь? -->
+        <div class="card" style="margin-top: 20px; text-align: center;">
+          <div style="font-size: 24px; margin-bottom: 8px;">💬</div>
+          <div style="font-weight: 600; margin-bottom: 4px;">Нужна помощь с установкой?</div>
+          <div style="font-size: 14px; color: #666; margin-bottom: 12px;">Наша поддержка онлайн 24/7</div>
+          <button onclick="contactSupport()" style="
+            padding: 10px 24px;
+            background: white;
+            color: #F97316;
+            border: 2px solid #F97316;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+          ">Написать в поддержку</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Экран: VPN Сервис -->
+    <div class="screen" id="vpnScreen">
+      <div class="header" style="background: linear-gradient(135deg, #059669 0%, #10B981 100%);">
+        <div class="header-top">
+          <div>
+            <h1>🔐 Yesim VPN</h1>
+            <p>Безопасный интернет везде</p>
+          </div>
+          <button class="map-btn" onclick="showScreen('homeScreen')" style="background: rgba(255,255,255,0.2);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M19 12H5M12 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <div class="content" style="padding-bottom: 100px;">
+        <!-- Статус подключения -->
+        <div id="vpnStatusCard" class="card" style="text-align: center; padding: 30px 20px; background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%); border: 2px solid #10B981;">
+          <div id="vpnStatusIcon" style="font-size: 64px; margin-bottom: 16px;">🔓</div>
+          <div id="vpnStatusText" style="font-size: 24px; font-weight: 700; color: #166534; margin-bottom: 8px;">Не подключено</div>
+          <div id="vpnStatusSubtext" style="font-size: 14px; color: #15803D;">Нажмите для подключения</div>
+          
+          <!-- Кнопка включения -->
+          <button id="vpnToggleBtn" onclick="toggleVPN()" style="
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            border: none;
+            margin: 24px auto;
+            cursor: pointer;
+            box-shadow: 0 8px 32px rgba(16, 185, 129, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+          ">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+              <polygon points="5 3 19 12 5 21 5 3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          
+          <div id="vpnTimer" style="font-size: 32px; font-weight: 700; color: #059669; display: none;">00:00:00</div>
+        </div>
+        
+        <!-- Выбор сервера -->
+        <div class="section-title" style="margin-top: 20px;">Выберите сервер</div>
+        
+        <div id="vpnServerList">
+          <div class="card vpn-server" onclick="selectVPNServer('auto')" id="vpnServerAuto" style="cursor: pointer; border: 2px solid #10B981; background: #ECFDF5;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <div style="font-size: 32px;">⚡</div>
+              <div style="flex: 1;">
+                <div style="font-weight: 700; color: #1A1A1A;">Авто-выбор</div>
+                <div style="font-size: 13px; color: #666;">Оптимальный сервер</div>
+              </div>
+              <div style="text-align: right;">
+                <div style="font-size: 13px; color: #10B981; font-weight: 600;">Рекомендуем</div>
+                <div style="font-size: 12px; color: #666;">12 мс</div>
+              </div>
+              <div id="vpnCheckAuto" style="width: 24px; height: 24px; background: #10B981; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card vpn-server" onclick="selectVPNServer('nl')" id="vpnServerNL" style="cursor: pointer;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <div style="font-size: 32px;">🇳🇱</div>
+              <div style="flex: 1;">
+                <div style="font-weight: 700; color: #1A1A1A;">Нидерланды</div>
+                <div style="font-size: 13px; color: #666;">Амстердам</div>
+              </div>
+              <div style="text-align: right;">
+                <div style="font-size: 12px; color: #666;">18 мс</div>
+              </div>
+              <div id="vpnCheckNL" style="width: 24px; height: 24px; background: #E5E7EB; border-radius: 50%; display: none; align-items: center; justify-content: center;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card vpn-server" onclick="selectVPNServer('de')" id="vpnServerDE" style="cursor: pointer;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <div style="font-size: 32px;">🇩🇪</div>
+              <div style="flex: 1;">
+                <div style="font-weight: 700; color: #1A1A1A;">Германия</div>
+                <div style="font-size: 13px; color: #666;">Франкфурт</div>
+              </div>
+              <div style="text-align: right;">
+                <div style="font-size: 12px; color: #666;">24 мс</div>
+              </div>
+              <div id="vpnCheckDE" style="width: 24px; height: 24px; background: #E5E7EB; border-radius: 50%; display: none; align-items: center; justify-content: center;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card vpn-server" onclick="selectVPNServer('us')" id="vpnServerUS" style="cursor: pointer;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <div style="font-size: 32px;">🇺🇸</div>
+              <div style="flex: 1;">
+                <div style="font-weight: 700; color: #1A1A1A;">США</div>
+                <div style="font-size: 13px; color: #666;">Нью-Йорк</div>
+              </div>
+              <div style="text-align: right;">
+                <div style="font-size: 12px; color: #666;">89 мс</div>
+              </div>
+              <div id="vpnCheckUS" style="width: 24px; height: 24px; background: #E5E7EB; border-radius: 50%; display: none; align-items: center; justify-content: center;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card vpn-server" onclick="selectVPNServer('uk')" id="vpnServerUK" style="cursor: pointer;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <div style="font-size: 32px;">🇬🇧</div>
+              <div style="flex: 1;">
+                <div style="font-weight: 700; color: #1A1A1A;">Великобритания</div>
+                <div style="font-size: 13px; color: #666;">Лондон</div>
+              </div>
+              <div style="text-align: right;">
+                <div style="font-size: 12px; color: #666;">32 мс</div>
+              </div>
+              <div id="vpnCheckUK" style="width: 24px; height: 24px; background: #E5E7EB; border-radius: 50%; display: none; align-items: center; justify-content: center;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card vpn-server" onclick="selectVPNServer('jp')" id="vpnServerJP" style="cursor: pointer;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <div style="font-size: 32px;">🇯🇵</div>
+              <div style="flex: 1;">
+                <div style="font-weight: 700; color: #1A1A1A;">Япония</div>
+                <div style="font-size: 13px; color: #666;">Токио</div>
+              </div>
+              <div style="text-align: right;">
+                <div style="font-size: 12px; color: #666;">156 мс</div>
+              </div>
+              <div id="vpnCheckJP" style="width: 24px; height: 24px; background: #E5E7EB; border-radius: 50%; display: none; align-items: center; justify-content: center;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card vpn-server" onclick="selectVPNServer('sg')" id="vpnServerSG" style="cursor: pointer;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <div style="font-size: 32px;">🇸🇬</div>
+              <div style="flex: 1;">
+                <div style="font-weight: 700; color: #1A1A1A;">Сингапур</div>
+                <div style="font-size: 13px; color: #666;">Сингапур</div>
+              </div>
+              <div style="text-align: right;">
+                <div style="font-size: 12px; color: #666;">178 мс</div>
+              </div>
+              <div id="vpnCheckSG" style="width: 24px; height: 24px; background: #E5E7EB; border-radius: 50%; display: none; align-items: center; justify-content: center;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Преимущества VPN -->
+        <div class="section-title" style="margin-top: 24px;">Преимущества</div>
+        
+        <div class="card" style="background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%); border: 1px solid #A5B4FC;">
+          <div style="display: flex; gap: 16px; margin-bottom: 16px;">
+            <div style="flex: 1; text-align: center;">
+              <div style="font-size: 28px; margin-bottom: 8px;">🔒</div>
+              <div style="font-size: 12px; font-weight: 600; color: #4338CA;">Шифрование</div>
+              <div style="font-size: 11px; color: #6366F1;">AES-256</div>
+            </div>
+            <div style="flex: 1; text-align: center;">
+              <div style="font-size: 28px; margin-bottom: 8px;">👁️‍🗨️</div>
+              <div style="font-size: 12px; font-weight: 600; color: #4338CA;">Анонимность</div>
+              <div style="font-size: 11px; color: #6366F1;">No-logs</div>
+            </div>
+            <div style="flex: 1; text-align: center;">
+              <div style="font-size: 28px; margin-bottom: 8px;">⚡</div>
+              <div style="font-size: 12px; font-weight: 600; color: #4338CA;">Скорость</div>
+              <div style="font-size: 11px; color: #6366F1;">До 1 Гбит/с</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Статистика использования -->
+        <div class="card" style="margin-top: 12px;">
+          <div class="section-title" style="font-size: 16px; margin-bottom: 12px;">📊 Статистика сессии</div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+            <span style="color: #666;">Загружено:</span>
+            <span id="vpnDownload" style="font-weight: 600;">0 MB</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+            <span style="color: #666;">Отправлено:</span>
+            <span id="vpnUpload" style="font-weight: 600;">0 MB</span>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span style="color: #666;">Ваш IP:</span>
+            <span id="vpnIP" style="font-weight: 600; color: #DC2626;">Виден</span>
+          </div>
+        </div>
+        
+        <!-- Тарифы VPN -->
+        <div class="section-title" style="margin-top: 24px;">Тарифы VPN</div>
+        
+        <div style="display: flex; gap: 12px; overflow-x: auto; padding-bottom: 8px;">
+          <div class="card" style="min-width: 140px; text-align: center; border: 2px solid transparent; cursor: pointer;" onclick="selectVPNPlan('free')">
+            <div style="font-size: 24px; margin-bottom: 8px;">🆓</div>
+            <div style="font-weight: 700;">Бесплатно</div>
+            <div style="font-size: 24px; font-weight: 700; color: #10B981; margin: 8px 0;">$0</div>
+            <div style="font-size: 12px; color: #666;">500 MB/день</div>
+            <div style="font-size: 11px; color: #999; margin-top: 4px;">3 локации</div>
+          </div>
+          
+          <div class="card" style="min-width: 140px; text-align: center; border: 2px solid #F97316; background: #FFF7ED; cursor: pointer;" onclick="selectVPNPlan('month')">
+            <div style="font-size: 24px; margin-bottom: 8px;">⭐</div>
+            <div style="font-weight: 700;">Месяц</div>
+            <div style="font-size: 24px; font-weight: 700; color: #F97316; margin: 8px 0;">$4.99</div>
+            <div style="font-size: 12px; color: #666;">Безлимит</div>
+            <div style="font-size: 11px; color: #F97316; margin-top: 4px;">Все локации</div>
+          </div>
+          
+          <div class="card" style="min-width: 140px; text-align: center; border: 2px solid transparent; cursor: pointer;" onclick="selectVPNPlan('year')">
+            <div style="font-size: 24px; margin-bottom: 8px;">💎</div>
+            <div style="font-weight: 700;">Год</div>
+            <div style="font-size: 24px; font-weight: 700; color: #8B5CF6; margin: 8px 0;">$29.99</div>
+            <div style="font-size: 12px; color: #666;">Безлимит</div>
+            <div style="font-size: 11px; color: #10B981; margin-top: 4px;">-50% экономия</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Экран: GB Маркетплейс -->
+    <div class="screen" id="gbMarketScreen">
+      <div class="header" style="background: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%);">
+        <div class="header-top">
+          <div>
+            <h1>🛒 GB Маркет</h1>
+            <p>Купи или продай гигабайты</p>
+          </div>
+          <button class="map-btn" onclick="showScreen('homeScreen')" style="background: rgba(255,255,255,0.2);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M19 12H5M12 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        
+        <!-- Статистика маркетплейса -->
+        <div style="display: flex; gap: 12px; margin-top: 16px;">
+          <div style="flex: 1; background: rgba(255,255,255,0.2); border-radius: 12px; padding: 12px; text-align: center;">
+            <div style="font-size: 20px; font-weight: 700;">247</div>
+            <div style="font-size: 11px; opacity: 0.9;">Предложений</div>
+          </div>
+          <div style="flex: 1; background: rgba(255,255,255,0.2); border-radius: 12px; padding: 12px; text-align: center;">
+            <div style="font-size: 20px; font-weight: 700;">$0.89</div>
+            <div style="font-size: 11px; opacity: 0.9;">Средняя цена/GB</div>
+          </div>
+          <div style="flex: 1; background: rgba(255,255,255,0.2); border-radius: 12px; padding: 12px; text-align: center;">
+            <div style="font-size: 20px; font-weight: 700;">1.2K</div>
+            <div style="font-size: 11px; opacity: 0.9;">Сделок</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="content" style="padding-bottom: 100px;">
+        <!-- Мои предложения -->
+        <div class="card" style="background: linear-gradient(135deg, #FEFCE8 0%, #FEF9C3 100%); border: 1px solid #FDE047;">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div>
+              <div style="font-weight: 700; color: #854D0E;">💰 Продай свой трафик</div>
+              <div style="font-size: 13px; color: #A16207; margin-top: 4px;">Заработай на неиспользованных GB</div>
+            </div>
+            <button onclick="openSellGBModal()" style="
+              background: linear-gradient(135deg, #EAB308 0%, #FACC15 100%);
+              color: white;
+              border: none;
+              padding: 10px 16px;
+              border-radius: 10px;
+              font-weight: 700;
+              font-size: 14px;
+              cursor: pointer;
+            ">Продать</button>
+          </div>
+        </div>
+        
+        <!-- Фильтры -->
+        <div style="display: flex; gap: 8px; margin-bottom: 16px; overflow-x: auto; padding: 4px 0;">
+          <button onclick="filterMarket('all')" class="market-filter active" style="
+            padding: 8px 16px;
+            background: #8B5CF6;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+            cursor: pointer;
+          ">Все</button>
+          <button onclick="filterMarket('europe')" class="market-filter" style="
+            padding: 8px 16px;
+            background: #F3F4F6;
+            color: #374151;
+            border: none;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+            cursor: pointer;
+          ">🇪🇺 Европа</button>
+          <button onclick="filterMarket('usa')" class="market-filter" style="
+            padding: 8px 16px;
+            background: #F3F4F6;
+            color: #374151;
+            border: none;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+            cursor: pointer;
+          ">🇺🇸 США</button>
+          <button onclick="filterMarket('asia')" class="market-filter" style="
+            padding: 8px 16px;
+            background: #F3F4F6;
+            color: #374151;
+            border: none;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+            cursor: pointer;
+          ">🌏 Азия</button>
+          <button onclick="filterMarket('cheap')" class="market-filter" style="
+            padding: 8px 16px;
+            background: #F3F4F6;
+            color: #374151;
+            border: none;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+            cursor: pointer;
+          ">💰 Дешевле</button>
+        </div>
+        
+        <div class="section-title">Доступные предложения</div>
+        
+        <!-- Список предложений -->
+        <div id="marketListings">
+          <!-- Предложение 1 -->
+          <div class="card" style="margin-bottom: 12px; border: 1px solid #E5E7EB;">
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+              <div style="font-size: 36px;">🇩🇪</div>
+              <div style="flex: 1;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                  <div>
+                    <div style="font-weight: 700; color: #1A1A1A;">Германия</div>
+                    <div style="font-size: 13px; color: #666;">от @traveler_max</div>
+                  </div>
+                  <div style="text-align: right;">
+                    <div style="font-size: 20px; font-weight: 700; color: #8B5CF6;">2.5 GB</div>
+                    <div style="font-size: 14px; color: #10B981; font-weight: 600;">$1.99</div>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap;">
+                  <span style="background: #F3F4F6; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #666;">⏳ 5 дней</span>
+                  <span style="background: #ECFDF5; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #059669;">⭐ 4.9</span>
+                  <span style="background: #EEF2FF; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #6366F1;">🔄 23 продажи</span>
+                </div>
+                <button onclick="buyFromMarket('de', 2.5, 1.99, '@traveler_max')" style="
+                  width: 100%;
+                  margin-top: 12px;
+                  padding: 10px;
+                  background: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%);
+                  color: white;
+                  border: none;
+                  border-radius: 10px;
+                  font-weight: 600;
+                  font-size: 14px;
+                  cursor: pointer;
+                ">Купить за $1.99</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Предложение 2 -->
+          <div class="card" style="margin-bottom: 12px; border: 1px solid #E5E7EB;">
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+              <div style="font-size: 36px;">🇫🇷</div>
+              <div style="flex: 1;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                  <div>
+                    <div style="font-weight: 700; color: #1A1A1A;">Франция</div>
+                    <div style="font-size: 13px; color: #666;">от @paris_love</div>
+                  </div>
+                  <div style="text-align: right;">
+                    <div style="font-size: 20px; font-weight: 700; color: #8B5CF6;">5 GB</div>
+                    <div style="font-size: 14px; color: #10B981; font-weight: 600;">$3.50</div>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap;">
+                  <span style="background: #F3F4F6; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #666;">⏳ 12 дней</span>
+                  <span style="background: #ECFDF5; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #059669;">⭐ 5.0</span>
+                  <span style="background: #FEF3C7; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #D97706;">🔥 Топ продавец</span>
+                </div>
+                <button onclick="buyFromMarket('fr', 5, 3.50, '@paris_love')" style="
+                  width: 100%;
+                  margin-top: 12px;
+                  padding: 10px;
+                  background: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%);
+                  color: white;
+                  border: none;
+                  border-radius: 10px;
+                  font-weight: 600;
+                  font-size: 14px;
+                  cursor: pointer;
+                ">Купить за $3.50</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Предложение 3 -->
+          <div class="card" style="margin-bottom: 12px; border: 1px solid #E5E7EB;">
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+              <div style="font-size: 36px;">🇺🇸</div>
+              <div style="flex: 1;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                  <div>
+                    <div style="font-weight: 700; color: #1A1A1A;">США</div>
+                    <div style="font-size: 13px; color: #666;">от @usa_nomad</div>
+                  </div>
+                  <div style="text-align: right;">
+                    <div style="font-size: 20px; font-weight: 700; color: #8B5CF6;">1.8 GB</div>
+                    <div style="font-size: 14px; color: #10B981; font-weight: 600;">$0.99</div>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap;">
+                  <span style="background: #FEE2E2; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #DC2626;">⏳ 2 дня</span>
+                  <span style="background: #ECFDF5; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #059669;">⭐ 4.7</span>
+                  <span style="background: #DCFCE7; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #16A34A;">💎 Выгодно!</span>
+                </div>
+                <button onclick="buyFromMarket('us', 1.8, 0.99, '@usa_nomad')" style="
+                  width: 100%;
+                  margin-top: 12px;
+                  padding: 10px;
+                  background: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%);
+                  color: white;
+                  border: none;
+                  border-radius: 10px;
+                  font-weight: 600;
+                  font-size: 14px;
+                  cursor: pointer;
+                ">Купить за $0.99</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Предложение 4 -->
+          <div class="card" style="margin-bottom: 12px; border: 1px solid #E5E7EB;">
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+              <div style="font-size: 36px;">🇯🇵</div>
+              <div style="flex: 1;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                  <div>
+                    <div style="font-weight: 700; color: #1A1A1A;">Япония</div>
+                    <div style="font-size: 13px; color: #666;">от @tokyo_drift</div>
+                  </div>
+                  <div style="text-align: right;">
+                    <div style="font-size: 20px; font-weight: 700; color: #8B5CF6;">3 GB</div>
+                    <div style="font-size: 14px; color: #10B981; font-weight: 600;">$2.49</div>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap;">
+                  <span style="background: #F3F4F6; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #666;">⏳ 8 дней</span>
+                  <span style="background: #ECFDF5; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #059669;">⭐ 4.8</span>
+                  <span style="background: #EEF2FF; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #6366F1;">🔄 15 продаж</span>
+                </div>
+                <button onclick="buyFromMarket('jp', 3, 2.49, '@tokyo_drift')" style="
+                  width: 100%;
+                  margin-top: 12px;
+                  padding: 10px;
+                  background: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%);
+                  color: white;
+                  border: none;
+                  border-radius: 10px;
+                  font-weight: 600;
+                  font-size: 14px;
+                  cursor: pointer;
+                ">Купить за $2.49</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Предложение 5 -->
+          <div class="card" style="margin-bottom: 12px; border: 1px solid #E5E7EB;">
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+              <div style="font-size: 36px;">🇹🇷</div>
+              <div style="flex: 1;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                  <div>
+                    <div style="font-weight: 700; color: #1A1A1A;">Турция</div>
+                    <div style="font-size: 13px; color: #666;">от @istanbul_vibes</div>
+                  </div>
+                  <div style="text-align: right;">
+                    <div style="font-size: 20px; font-weight: 700; color: #8B5CF6;">4.2 GB</div>
+                    <div style="font-size: 14px; color: #10B981; font-weight: 600;">$2.10</div>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap;">
+                  <span style="background: #F3F4F6; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #666;">⏳ 10 дней</span>
+                  <span style="background: #ECFDF5; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #059669;">⭐ 4.6</span>
+                  <span style="background: #DCFCE7; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #16A34A;">🆕 Новый</span>
+                </div>
+                <button onclick="buyFromMarket('tr', 4.2, 2.10, '@istanbul_vibes')" style="
+                  width: 100%;
+                  margin-top: 12px;
+                  padding: 10px;
+                  background: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%);
+                  color: white;
+                  border: none;
+                  border-radius: 10px;
+                  font-weight: 600;
+                  font-size: 14px;
+                  cursor: pointer;
+                ">Купить за $2.10</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Информация о безопасности -->
+        <div class="card" style="background: #F0FDF4; border: 1px solid #86EFAC; margin-top: 16px;">
+          <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="font-size: 24px;">🛡️</div>
+            <div>
+              <div style="font-weight: 700; color: #166534;">Безопасные сделки</div>
+              <div style="font-size: 13px; color: #15803D; margin-top: 4px;">
+                Все транзакции защищены. Деньги переводятся продавцу только после подтверждения получения трафика.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <div class="tabs">
       <div class="tab active" onclick="showScreen('homeScreen')">
         <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -2806,6 +3626,34 @@
           </svg>
         </div>
         
+        <div class="burger-menu-section-title">Сервисы</div>
+        <div class="burger-menu-item" onclick="closeBurgerMenu(); showScreen('vpnScreen');">
+          <div class="burger-menu-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="burger-menu-text">🔐 VPN Сервис</div>
+          <svg class="burger-menu-arrow" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        
+        <div class="burger-menu-item" onclick="closeBurgerMenu(); showScreen('gbMarketScreen');">
+          <div class="burger-menu-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2">
+              <circle cx="9" cy="21" r="1"/>
+              <circle cx="20" cy="21" r="1"/>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="burger-menu-text">🛒 GB Маркетплейс</div>
+          <svg class="burger-menu-arrow" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        
         <div class="burger-menu-section-title">Оператор и тарифы</div>
         <div class="burger-menu-item" onclick="openOwnOperator()">
           <div class="burger-menu-icon">
@@ -2859,6 +3707,52 @@
             </svg>
           </div>
           <div class="burger-menu-text">Семейный пакет</div>
+          <svg class="burger-menu-arrow" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        
+        <div class="burger-menu-item" onclick="closeBurgerMenu(); giftDataToFriend();">
+          <div class="burger-menu-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2">
+              <path d="M20 12v10H4V12" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 7h20v5H2z" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 22V7" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="burger-menu-text">Подарить гигабайты</div>
+          <svg class="burger-menu-arrow" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        
+        <div class="burger-menu-section-title">Помощь</div>
+        <div class="burger-menu-item" onclick="closeBurgerMenu(); showScreen('esimSetupScreen');">
+          <div class="burger-menu-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke-linecap="round" stroke-linejoin="round"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <div class="burger-menu-text">📖 Как установить eSIM</div>
+          <svg class="burger-menu-arrow" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        
+        <div class="burger-menu-item" onclick="closeBurgerMenu(); showDataSavingTips();">
+          <div class="burger-menu-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <div class="burger-menu-text">💡 Экономия трафика</div>
           <svg class="burger-menu-arrow" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2">
             <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -3177,6 +4071,705 @@
       // Можно добавить флаг, что покупка для друга
       window.buyingForFriend = true;
       alert('Выберите план для друга. После покупки вы сможете отправить QR-код.');
+    }
+    
+    // Функция подарка оставшихся гигабайтов
+    function giftDataToFriend() {
+      // Симуляция данных активных eSIM с остатком трафика
+      const activeEsims = [
+        { id: 1, country: 'США', flag: '🇺🇸', remainingGB: 3.5, totalGB: 10, expiresIn: '5 дней' },
+        { id: 2, country: 'Германия', flag: '🇩🇪', remainingGB: 1.2, totalGB: 5, expiresIn: '2 дня' }
+      ];
+      
+      if (activeEsims.length === 0) {
+        showNotification('У вас нет активных eSIM с остатком трафика', 'warning');
+        return;
+      }
+      
+      let esimOptions = activeEsims.map(esim => 
+        `<div class="gift-esim-option" onclick="selectEsimToGift(${esim.id})" id="giftEsim${esim.id}" style="
+          display: flex;
+          align-items: center;
+          padding: 16px;
+          background: #FAFAFA;
+          border-radius: 12px;
+          margin-bottom: 12px;
+          cursor: pointer;
+          border: 2px solid transparent;
+          transition: all 0.2s;
+        ">
+          <span style="font-size: 32px; margin-right: 12px;">${esim.flag}</span>
+          <div style="flex: 1;">
+            <div style="font-weight: 600; color: #1A1A1A;">${esim.country}</div>
+            <div style="font-size: 13px; color: #666;">Осталось: ${esim.remainingGB} GB из ${esim.totalGB} GB</div>
+            <div style="font-size: 12px; color: #F97316;">Истекает через ${esim.expiresIn}</div>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-size: 20px; font-weight: 700; color: #10B981;">${esim.remainingGB} GB</div>
+          </div>
+        </div>`
+      ).join('');
+      
+      const modalHtml = `
+        <div id="giftDataModal" style="
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0,0,0,0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 10000;
+          backdrop-filter: blur(4px);
+        " onclick="if(event.target === this) closeGiftDataModal()">
+          <div style="
+            background: white;
+            border-radius: 24px;
+            width: 90%;
+            max-width: 400px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+          ">
+            <div style="
+              background: linear-gradient(135deg, #10B981 0%, #34D399 100%);
+              color: white;
+              padding: 24px;
+              border-radius: 24px 24px 0 0;
+              text-align: center;
+            ">
+              <div style="font-size: 48px; margin-bottom: 12px;">🎁</div>
+              <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 4px;">Подарить гигабайты</h2>
+              <p style="font-size: 14px; opacity: 0.9;">Поделитесь остатком трафика с другом</p>
+            </div>
+            
+            <div style="padding: 20px;">
+              <div style="font-weight: 600; margin-bottom: 12px; color: #1A1A1A;">Выберите eSIM:</div>
+              ${esimOptions}
+              
+              <div id="giftAmountSection" style="display: none; margin-top: 20px;">
+                <div style="font-weight: 600; margin-bottom: 12px; color: #1A1A1A;">Сколько GB подарить?</div>
+                <div style="display: flex; gap: 10px; margin-bottom: 16px;">
+                  <button onclick="setGiftAmount(0.5)" class="gift-amount-btn" style="
+                    flex: 1;
+                    padding: 12px;
+                    border: 2px solid #E5E5E5;
+                    border-radius: 12px;
+                    background: white;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                  ">0.5 GB</button>
+                  <button onclick="setGiftAmount(1)" class="gift-amount-btn" style="
+                    flex: 1;
+                    padding: 12px;
+                    border: 2px solid #E5E5E5;
+                    border-radius: 12px;
+                    background: white;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                  ">1 GB</button>
+                  <button onclick="setGiftAmount(2)" class="gift-amount-btn" style="
+                    flex: 1;
+                    padding: 12px;
+                    border: 2px solid #E5E5E5;
+                    border-radius: 12px;
+                    background: white;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                  ">2 GB</button>
+                </div>
+                
+                <div style="font-weight: 600; margin-bottom: 12px; color: #1A1A1A;">Email или телефон получателя:</div>
+                <input type="text" id="giftRecipient" placeholder="email@example.com или +7..." style="
+                  width: 100%;
+                  padding: 14px 16px;
+                  border: 1px solid #E5E5E5;
+                  border-radius: 12px;
+                  font-size: 16px;
+                  box-sizing: border-box;
+                  margin-bottom: 16px;
+                ">
+                
+                <div style="font-weight: 600; margin-bottom: 12px; color: #1A1A1A;">Сообщение (необязательно):</div>
+                <textarea id="giftMessage" placeholder="Привет! Дарю тебе немного трафика 🎁" style="
+                  width: 100%;
+                  padding: 14px 16px;
+                  border: 1px solid #E5E5E5;
+                  border-radius: 12px;
+                  font-size: 16px;
+                  box-sizing: border-box;
+                  resize: none;
+                  height: 80px;
+                "></textarea>
+              </div>
+              
+              <button id="sendGiftBtn" onclick="sendGiftData()" style="
+                width: 100%;
+                padding: 16px;
+                background: linear-gradient(135deg, #10B981 0%, #34D399 100%);
+                color: white;
+                border: none;
+                border-radius: 12px;
+                font-size: 16px;
+                font-weight: 700;
+                cursor: pointer;
+                margin-top: 20px;
+                display: none;
+              ">🎁 Отправить подарок</button>
+              
+              <button onclick="closeGiftDataModal()" style="
+                width: 100%;
+                padding: 14px;
+                background: #F5F5F5;
+                color: #666;
+                border: none;
+                border-radius: 12px;
+                font-size: 15px;
+                font-weight: 600;
+                cursor: pointer;
+                margin-top: 10px;
+              ">Отмена</button>
+            </div>
+          </div>
+        </div>
+      `;
+      
+      document.body.insertAdjacentHTML('beforeend', modalHtml);
+      window.selectedGiftEsim = null;
+      window.selectedGiftAmount = null;
+    }
+    
+    function selectEsimToGift(esimId) {
+      // Убираем выделение со всех
+      document.querySelectorAll('.gift-esim-option').forEach(el => {
+        el.style.borderColor = 'transparent';
+        el.style.background = '#FAFAFA';
+      });
+      // Выделяем выбранный
+      const selected = document.getElementById('giftEsim' + esimId);
+      if (selected) {
+        selected.style.borderColor = '#10B981';
+        selected.style.background = '#ECFDF5';
+      }
+      window.selectedGiftEsim = esimId;
+      document.getElementById('giftAmountSection').style.display = 'block';
+    }
+    
+    function setGiftAmount(amount) {
+      window.selectedGiftAmount = amount;
+      document.querySelectorAll('.gift-amount-btn').forEach(btn => {
+        btn.style.borderColor = '#E5E5E5';
+        btn.style.background = 'white';
+        btn.style.color = '#1A1A1A';
+      });
+      event.target.style.borderColor = '#10B981';
+      event.target.style.background = '#ECFDF5';
+      event.target.style.color = '#10B981';
+      document.getElementById('sendGiftBtn').style.display = 'block';
+    }
+    
+    function sendGiftData() {
+      const recipient = document.getElementById('giftRecipient').value.trim();
+      const message = document.getElementById('giftMessage').value.trim();
+      
+      if (!window.selectedGiftEsim) {
+        showNotification('Выберите eSIM', 'warning');
+        return;
+      }
+      if (!window.selectedGiftAmount) {
+        showNotification('Выберите количество GB', 'warning');
+        return;
+      }
+      if (!recipient) {
+        showNotification('Введите email или телефон получателя', 'warning');
+        return;
+      }
+      
+      closeGiftDataModal();
+      
+      // Показываем уведомление об успехе
+      showNotification(`🎁 Подарок ${window.selectedGiftAmount} GB отправлен на ${recipient}!`, 'success');
+    }
+    
+    function closeGiftDataModal() {
+      const modal = document.getElementById('giftDataModal');
+      if (modal) {
+        modal.remove();
+      }
+    }
+    
+    // ========== VPN СЕРВИС ==========
+    
+    let vpnConnected = false;
+    let vpnSelectedServer = 'auto';
+    let vpnTimerInterval = null;
+    let vpnSeconds = 0;
+    let vpnDownloadMB = 0;
+    let vpnUploadMB = 0;
+    
+    function selectVPNServer(serverId) {
+      // Убираем выделение со всех серверов
+      document.querySelectorAll('.vpn-server').forEach(el => {
+        el.style.border = '1px solid #F0F0F0';
+        el.style.background = 'white';
+      });
+      document.querySelectorAll('[id^="vpnCheck"]').forEach(el => {
+        el.style.display = 'none';
+        el.style.background = '#E5E7EB';
+      });
+      
+      // Выделяем выбранный сервер
+      const serverEl = document.getElementById('vpnServer' + serverId.toUpperCase());
+      if (serverEl) {
+        serverEl.style.border = '2px solid #10B981';
+        serverEl.style.background = '#ECFDF5';
+      }
+      
+      const checkEl = document.getElementById('vpnCheck' + serverId.toUpperCase());
+      if (checkEl) {
+        checkEl.style.display = 'flex';
+        checkEl.style.background = '#10B981';
+      }
+      
+      vpnSelectedServer = serverId;
+      
+      if (vpnConnected) {
+        showNotification(`Переключение на сервер: ${getServerName(serverId)}`, 'info');
+      }
+    }
+    
+    function getServerName(serverId) {
+      const names = {
+        'auto': 'Авто-выбор',
+        'nl': 'Нидерланды',
+        'de': 'Германия',
+        'us': 'США',
+        'uk': 'Великобритания',
+        'jp': 'Япония',
+        'sg': 'Сингапур'
+      };
+      return names[serverId] || serverId;
+    }
+    
+    function toggleVPN() {
+      const statusCard = document.getElementById('vpnStatusCard');
+      const statusIcon = document.getElementById('vpnStatusIcon');
+      const statusText = document.getElementById('vpnStatusText');
+      const statusSubtext = document.getElementById('vpnStatusSubtext');
+      const toggleBtn = document.getElementById('vpnToggleBtn');
+      const timer = document.getElementById('vpnTimer');
+      const ipEl = document.getElementById('vpnIP');
+      
+      if (!vpnConnected) {
+        // Подключение
+        statusIcon.textContent = '⏳';
+        statusText.textContent = 'Подключение...';
+        statusSubtext.textContent = 'Устанавливаем защищённое соединение';
+        toggleBtn.style.opacity = '0.7';
+        toggleBtn.disabled = true;
+        
+        setTimeout(() => {
+          vpnConnected = true;
+          statusCard.style.background = 'linear-gradient(135deg, #DCFCE7 0%, #BBF7D0 100%)';
+          statusCard.style.borderColor = '#22C55E';
+          statusIcon.textContent = '🔒';
+          statusText.textContent = 'Защищено';
+          statusSubtext.textContent = `Подключено к ${getServerName(vpnSelectedServer)}`;
+          
+          toggleBtn.style.opacity = '1';
+          toggleBtn.disabled = false;
+          toggleBtn.style.background = 'linear-gradient(135deg, #EF4444 0%, #DC2626 100%)';
+          toggleBtn.style.boxShadow = '0 8px 32px rgba(239, 68, 68, 0.4)';
+          toggleBtn.innerHTML = `
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+              <rect x="6" y="4" width="4" height="16" rx="1"/>
+              <rect x="14" y="4" width="4" height="16" rx="1"/>
+            </svg>
+          `;
+          
+          timer.style.display = 'block';
+          ipEl.textContent = '185.xxx.xxx.xxx';
+          ipEl.style.color = '#16A34A';
+          
+          // Запускаем таймер
+          vpnSeconds = 0;
+          vpnTimerInterval = setInterval(updateVPNTimer, 1000);
+          
+          showNotification('🔒 VPN подключён! Ваше соединение защищено.', 'success');
+        }, 1500);
+        
+      } else {
+        // Отключение
+        vpnConnected = false;
+        clearInterval(vpnTimerInterval);
+        
+        statusCard.style.background = 'linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%)';
+        statusCard.style.borderColor = '#10B981';
+        statusIcon.textContent = '🔓';
+        statusText.textContent = 'Не подключено';
+        statusSubtext.textContent = 'Нажмите для подключения';
+        
+        toggleBtn.style.background = 'linear-gradient(135deg, #10B981 0%, #059669 100%)';
+        toggleBtn.style.boxShadow = '0 8px 32px rgba(16, 185, 129, 0.4)';
+        toggleBtn.innerHTML = `
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+            <polygon points="5 3 19 12 5 21 5 3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        `;
+        
+        timer.style.display = 'none';
+        ipEl.textContent = 'Виден';
+        ipEl.style.color = '#DC2626';
+        
+        // Сбрасываем статистику
+        document.getElementById('vpnDownload').textContent = '0 MB';
+        document.getElementById('vpnUpload').textContent = '0 MB';
+        vpnDownloadMB = 0;
+        vpnUploadMB = 0;
+        
+        showNotification('VPN отключён', 'info');
+      }
+    }
+    
+    function updateVPNTimer() {
+      vpnSeconds++;
+      const hours = Math.floor(vpnSeconds / 3600);
+      const minutes = Math.floor((vpnSeconds % 3600) / 60);
+      const seconds = vpnSeconds % 60;
+      
+      document.getElementById('vpnTimer').textContent = 
+        `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      
+      // Симуляция трафика
+      if (Math.random() > 0.5) {
+        vpnDownloadMB += Math.random() * 0.5;
+        document.getElementById('vpnDownload').textContent = vpnDownloadMB.toFixed(1) + ' MB';
+      }
+      if (Math.random() > 0.7) {
+        vpnUploadMB += Math.random() * 0.1;
+        document.getElementById('vpnUpload').textContent = vpnUploadMB.toFixed(1) + ' MB';
+      }
+    }
+    
+    function selectVPNPlan(plan) {
+      const plans = {
+        'free': { name: 'Бесплатный', price: '$0' },
+        'month': { name: 'Месячный', price: '$4.99' },
+        'year': { name: 'Годовой', price: '$29.99' }
+      };
+      
+      if (plan === 'free') {
+        showNotification('Вы используете бесплатный план (500 MB/день)', 'info');
+      } else {
+        showNotification(`Тариф "${plans[plan].name}" за ${plans[plan].price} выбран. Перейдите к оплате.`, 'success');
+      }
+    }
+    
+    // ========== GB МАРКЕТПЛЕЙС ==========
+    
+    function filterMarket(filter) {
+      // Обновляем активную кнопку фильтра
+      document.querySelectorAll('.market-filter').forEach(btn => {
+        btn.style.background = '#F3F4F6';
+        btn.style.color = '#374151';
+        btn.classList.remove('active');
+      });
+      event.target.style.background = '#8B5CF6';
+      event.target.style.color = 'white';
+      event.target.classList.add('active');
+      
+      showNotification(`Фильтр: ${filter === 'all' ? 'Все предложения' : filter}`, 'info');
+    }
+    
+    function buyFromMarket(country, gb, price, seller) {
+      const modalHtml = `
+        <div id="buyMarketModal" style="
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0,0,0,0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 10000;
+          backdrop-filter: blur(4px);
+        " onclick="if(event.target === this) closeBuyMarketModal()">
+          <div style="
+            background: white;
+            border-radius: 24px;
+            width: 90%;
+            max-width: 400px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+          ">
+            <div style="
+              background: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%);
+              color: white;
+              padding: 24px;
+              text-align: center;
+            ">
+              <div style="font-size: 48px; margin-bottom: 12px;">🛒</div>
+              <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 4px;">Подтвердите покупку</h2>
+              <p style="font-size: 14px; opacity: 0.9;">P2P трансфер трафика</p>
+            </div>
+            
+            <div style="padding: 24px;">
+              <div style="background: #FAFAFA; border-radius: 16px; padding: 20px; margin-bottom: 20px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+                  <span style="color: #666;">Продавец:</span>
+                  <span style="font-weight: 600;">${seller}</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+                  <span style="color: #666;">Страна:</span>
+                  <span style="font-weight: 600;">${country.toUpperCase()}</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+                  <span style="color: #666;">Объём:</span>
+                  <span style="font-weight: 600; color: #8B5CF6;">${gb} GB</span>
+                </div>
+                <div style="height: 1px; background: #E5E5E5; margin: 12px 0;"></div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="font-weight: 600;">Итого:</span>
+                  <span style="font-size: 24px; font-weight: 700; color: #10B981;">$${price.toFixed(2)}</span>
+                </div>
+              </div>
+              
+              <div style="background: #FEF3C7; border-radius: 12px; padding: 12px; margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="font-size: 18px;">🔒</span>
+                  <span style="font-size: 13px; color: #92400E;">Безопасная сделка. Деньги защищены до подтверждения.</span>
+                </div>
+              </div>
+              
+              <button onclick="confirmMarketPurchase('${country}', ${gb}, ${price}, '${seller}')" style="
+                width: 100%;
+                padding: 16px;
+                background: linear-gradient(135deg, #10B981 0%, #34D399 100%);
+                color: white;
+                border: none;
+                border-radius: 12px;
+                font-size: 16px;
+                font-weight: 700;
+                cursor: pointer;
+              ">✓ Подтвердить покупку</button>
+              
+              <button onclick="closeBuyMarketModal()" style="
+                width: 100%;
+                padding: 14px;
+                background: #F5F5F5;
+                color: #666;
+                border: none;
+                border-radius: 12px;
+                font-size: 15px;
+                font-weight: 600;
+                cursor: pointer;
+                margin-top: 10px;
+              ">Отмена</button>
+            </div>
+          </div>
+        </div>
+      `;
+      
+      document.body.insertAdjacentHTML('beforeend', modalHtml);
+    }
+    
+    function closeBuyMarketModal() {
+      const modal = document.getElementById('buyMarketModal');
+      if (modal) modal.remove();
+    }
+    
+    function confirmMarketPurchase(country, gb, price, seller) {
+      closeBuyMarketModal();
+      showNotification(`🎉 Покупка ${gb} GB успешна! Трафик скоро будет активирован.`, 'success');
+    }
+    
+    function openSellGBModal() {
+      const activeEsims = [
+        { id: 1, country: 'США', flag: '🇺🇸', remainingGB: 3.5, expiresIn: '5 дней' },
+        { id: 2, country: 'Германия', flag: '🇩🇪', remainingGB: 1.2, expiresIn: '2 дня' },
+        { id: 3, country: 'Франция', flag: '🇫🇷', remainingGB: 4.8, expiresIn: '14 дней' }
+      ];
+      
+      let esimOptions = activeEsims.map(esim => 
+        `<div onclick="selectEsimToSell(${esim.id}, ${esim.remainingGB})" id="sellEsim${esim.id}" style="
+          display: flex;
+          align-items: center;
+          padding: 14px;
+          background: #FAFAFA;
+          border-radius: 12px;
+          margin-bottom: 10px;
+          cursor: pointer;
+          border: 2px solid transparent;
+          transition: all 0.2s;
+        ">
+          <span style="font-size: 28px; margin-right: 12px;">${esim.flag}</span>
+          <div style="flex: 1;">
+            <div style="font-weight: 600;">${esim.country}</div>
+            <div style="font-size: 12px; color: #666;">Осталось ${esim.remainingGB} GB • ${esim.expiresIn}</div>
+          </div>
+          <div style="font-weight: 700; color: #8B5CF6;">${esim.remainingGB} GB</div>
+        </div>`
+      ).join('');
+      
+      const modalHtml = `
+        <div id="sellGBModal" style="
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0,0,0,0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 10000;
+          backdrop-filter: blur(4px);
+        " onclick="if(event.target === this) closeSellGBModal()">
+          <div style="
+            background: white;
+            border-radius: 24px;
+            width: 90%;
+            max-width: 400px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+          ">
+            <div style="
+              background: linear-gradient(135deg, #EAB308 0%, #FACC15 100%);
+              color: white;
+              padding: 24px;
+              text-align: center;
+            ">
+              <div style="font-size: 48px; margin-bottom: 12px;">💰</div>
+              <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 4px;">Продать гигабайты</h2>
+              <p style="font-size: 14px; opacity: 0.9;">Заработайте на неиспользованном трафике</p>
+            </div>
+            
+            <div style="padding: 20px;">
+              <div style="font-weight: 600; margin-bottom: 12px;">Выберите eSIM:</div>
+              ${esimOptions}
+              
+              <div id="sellDetailsSection" style="display: none; margin-top: 20px;">
+                <div style="font-weight: 600; margin-bottom: 8px;">Сколько GB продать?</div>
+                <input type="number" id="sellGBAmount" step="0.1" min="0.1" placeholder="Например: 2.5" style="
+                  width: 100%;
+                  padding: 14px 16px;
+                  border: 1px solid #E5E5E5;
+                  border-radius: 12px;
+                  font-size: 16px;
+                  box-sizing: border-box;
+                  margin-bottom: 16px;
+                " oninput="updateSellPrice()">
+                
+                <div style="font-weight: 600; margin-bottom: 8px;">Цена за весь объём ($):</div>
+                <input type="number" id="sellPrice" step="0.01" min="0.01" placeholder="Например: 2.99" style="
+                  width: 100%;
+                  padding: 14px 16px;
+                  border: 1px solid #E5E5E5;
+                  border-radius: 12px;
+                  font-size: 16px;
+                  box-sizing: border-box;
+                  margin-bottom: 16px;
+                ">
+                
+                <div style="background: #F0FDF4; border-radius: 12px; padding: 12px; margin-bottom: 16px;">
+                  <div style="font-size: 13px; color: #166534;">
+                    💡 Рекомендуемая цена: <strong>$0.70-0.90 за 1 GB</strong>
+                  </div>
+                </div>
+                
+                <button onclick="publishSellListing()" style="
+                  width: 100%;
+                  padding: 16px;
+                  background: linear-gradient(135deg, #EAB308 0%, #FACC15 100%);
+                  color: white;
+                  border: none;
+                  border-radius: 12px;
+                  font-size: 16px;
+                  font-weight: 700;
+                  cursor: pointer;
+                ">📢 Опубликовать объявление</button>
+              </div>
+              
+              <button onclick="closeSellGBModal()" style="
+                width: 100%;
+                padding: 14px;
+                background: #F5F5F5;
+                color: #666;
+                border: none;
+                border-radius: 12px;
+                font-size: 15px;
+                font-weight: 600;
+                cursor: pointer;
+                margin-top: 10px;
+              ">Отмена</button>
+            </div>
+          </div>
+        </div>
+      `;
+      
+      document.body.insertAdjacentHTML('beforeend', modalHtml);
+      window.selectedSellEsim = null;
+      window.selectedSellMaxGB = 0;
+    }
+    
+    function selectEsimToSell(esimId, maxGB) {
+      document.querySelectorAll('[id^="sellEsim"]').forEach(el => {
+        el.style.borderColor = 'transparent';
+        el.style.background = '#FAFAFA';
+      });
+      const selected = document.getElementById('sellEsim' + esimId);
+      if (selected) {
+        selected.style.borderColor = '#EAB308';
+        selected.style.background = '#FEFCE8';
+      }
+      window.selectedSellEsim = esimId;
+      window.selectedSellMaxGB = maxGB;
+      document.getElementById('sellDetailsSection').style.display = 'block';
+      document.getElementById('sellGBAmount').max = maxGB;
+    }
+    
+    function updateSellPrice() {
+      const gbAmount = parseFloat(document.getElementById('sellGBAmount').value) || 0;
+      const suggestedPrice = (gbAmount * 0.80).toFixed(2);
+      document.getElementById('sellPrice').placeholder = `Рекомендуем: $${suggestedPrice}`;
+    }
+    
+    function publishSellListing() {
+      const gbAmount = parseFloat(document.getElementById('sellGBAmount').value);
+      const price = parseFloat(document.getElementById('sellPrice').value);
+      
+      if (!window.selectedSellEsim) {
+        showNotification('Выберите eSIM', 'warning');
+        return;
+      }
+      if (!gbAmount || gbAmount <= 0) {
+        showNotification('Укажите количество GB', 'warning');
+        return;
+      }
+      if (gbAmount > window.selectedSellMaxGB) {
+        showNotification(`Максимум ${window.selectedSellMaxGB} GB`, 'warning');
+        return;
+      }
+      if (!price || price <= 0) {
+        showNotification('Укажите цену', 'warning');
+        return;
+      }
+      
+      closeSellGBModal();
+      showNotification(`✅ Объявление опубликовано! ${gbAmount} GB за $${price.toFixed(2)}`, 'success');
+    }
+    
+    function closeSellGBModal() {
+      const modal = document.getElementById('sellGBModal');
+      if (modal) modal.remove();
     }
     
     let selectedFamilyTariff = null;
@@ -4130,8 +5723,145 @@ ${invitationLink}`;
     
     function completeInstallation() {
       closeQRModal();
-      alert('Успешно! eSIM установлен и активирован');
-      showScreen('ordersScreen');
+      showScreen('esimSetupScreen');
+      showNotification('🎉 Покупка успешна! Следуйте инструкции для установки.', 'success');
+    }
+    
+    function copyActivationCode() {
+      const code = 'LPA:1$esim.yesim.app$ABCD1234EFGH5678';
+      navigator.clipboard.writeText(code).then(() => {
+        showNotification('📋 Код скопирован в буфер обмена!', 'success');
+      }).catch(() => {
+        showNotification('Код: ' + code, 'info');
+      });
+    }
+    
+    function showDataSavingTips() {
+      const modalHtml = `
+        <div id="dataSavingModal" style="
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0,0,0,0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 10000;
+          backdrop-filter: blur(4px);
+        " onclick="if(event.target === this) closeDataSavingModal()">
+          <div style="
+            background: white;
+            border-radius: 24px;
+            width: 90%;
+            max-width: 400px;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+          ">
+            <div style="
+              background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);
+              color: white;
+              padding: 24px;
+              border-radius: 24px 24px 0 0;
+              text-align: center;
+            ">
+              <div style="font-size: 48px; margin-bottom: 12px;">💡</div>
+              <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 4px;">Экономия трафика</h2>
+              <p style="font-size: 14px; opacity: 0.9;">Советы для путешественников</p>
+            </div>
+            
+            <div style="padding: 20px;">
+              <div style="margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                  <span style="font-size: 28px;">📴</span>
+                  <div>
+                    <div style="font-weight: 700; color: #1A1A1A;">Автозагрузка медиа</div>
+                    <div style="font-size: 13px; color: #666;">Отключите в WhatsApp, Telegram, Instagram</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div style="margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                  <span style="font-size: 28px;">🔄</span>
+                  <div>
+                    <div style="font-weight: 700; color: #1A1A1A;">Фоновое обновление</div>
+                    <div style="font-size: 13px; color: #666;">Настройки → Обновление контента → Выкл</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div style="margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                  <span style="font-size: 28px;">☁️</span>
+                  <div>
+                    <div style="font-weight: 700; color: #1A1A1A;">Синхронизация облака</div>
+                    <div style="font-size: 13px; color: #666;">iCloud/Google Photos только по Wi-Fi</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div style="margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                  <span style="font-size: 28px;">📍</span>
+                  <div>
+                    <div style="font-weight: 700; color: #1A1A1A;">Оффлайн карты</div>
+                    <div style="font-size: 13px; color: #666;">Скачайте карты заранее в Google Maps</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div style="margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                  <span style="font-size: 28px;">📺</span>
+                  <div>
+                    <div style="font-weight: 700; color: #1A1A1A;">Качество видео</div>
+                    <div style="font-size: 13px; color: #666;">YouTube/Netflix → 480p экономит до 70%</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div style="margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                  <span style="font-size: 28px;">🎵</span>
+                  <div>
+                    <div style="font-weight: 700; color: #1A1A1A;">Музыка оффлайн</div>
+                    <div style="font-size: 13px; color: #666;">Spotify/Apple Music → Скачать плейлисты</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div style="background: #FEF3C7; border-radius: 12px; padding: 14px; margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="font-size: 20px;">💰</span>
+                  <span style="font-size: 14px; color: #92400E; font-weight: 600;">Эти советы сэкономят до 80% трафика!</span>
+                </div>
+              </div>
+              
+              <button onclick="closeDataSavingModal()" style="
+                width: 100%;
+                padding: 14px;
+                background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);
+                color: white;
+                border: none;
+                border-radius: 12px;
+                font-size: 16px;
+                font-weight: 700;
+                cursor: pointer;
+              ">Понятно!</button>
+            </div>
+          </div>
+        </div>
+      `;
+      
+      document.body.insertAdjacentHTML('beforeend', modalHtml);
+    }
+    
+    function closeDataSavingModal() {
+      const modal = document.getElementById('dataSavingModal');
+      if (modal) modal.remove();
     }
     
     function renderNewsScreen() {
